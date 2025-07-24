@@ -1,7 +1,9 @@
+import UploadForm from "./UploadForm.tsx";
+
 const Home = () =>{
     return (
         <div>
-            Hwwo Mr presidentt
+            <UploadForm/>
         </div>
     )
 

@@ -46,18 +46,15 @@ export default function setupPassport(passport: PassportStatic) {
         }));
 
 
-    passport.serializeUser((user: UserFill, done: Function) => {
-        console.log(user)
+    passport.serializeUser((user: UserType, done: Function) => {
         done(null, user._id);
     });
 
     passport.deserializeUser((id: string, done: Function) => {
         User.findById(id).then((user: UserType | null) => {
             if (!user) {
-                console.log("asd")
                 done({ error: "User not found" }, null);
             } else {
-                console.log(user)
                 done(null, user);
             }
         })

@@ -1,7 +1,7 @@
 interface aiSuccessResponse {
     description: string,
+    title: string,
     tags: string[],
-    keywords: string[],
 }
 
 interface aiFailResponse {

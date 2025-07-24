@@ -23,7 +23,6 @@ authRouter.get("/google/callback",
 })
 
 authRouter.get('/current_user', (req, res) => {
-    console.log("hit")
   res.json(req.user);
 });
 

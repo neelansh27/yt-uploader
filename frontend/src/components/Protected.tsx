@@ -11,13 +11,7 @@ const Protected: FC<{ children: React.ReactNode }> = ({ children }) => {
     }
     return (
         <div>
-            { loading ?
-                    <div>Loading...</div>:
-            <div>
-                {JSON.stringify(user)}
-                {children}
-            </div>
-            }
+            { loading ? <div>Loading...</div>: children }
         </div>
     );
 };
